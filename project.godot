@@ -15,6 +15,13 @@ run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/size/mode=4
+mouse_cursor/custom_image="res://cursor.png"
+
 [dotnet]
 
 project/assembly_name="BasementBots"
