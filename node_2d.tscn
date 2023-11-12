@@ -1,12 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddwqn7uo4f284"]
+[gd_scene load_steps=12 format=3 uid="uid://ddwqn7uo4f284"]
 
 [ext_resource type="Script" path="res://Movement.gd" id="1_a36ho"]
 [ext_resource type="Texture2D" uid="uid://dc04rkxxs75h5" path="res://icon.svg" id="2_ktvqq"]
 [ext_resource type="Script" path="res://cursor.gd" id="3_oboa7"]
 [ext_resource type="Texture2D" uid="uid://b7q3pff7sr4q6" path="res://cursor.png" id="3_vtbc8"]
+[ext_resource type="Texture2D" uid="uid://n4nfd08e84cy" path="res://click.png" id="5_m40y0"]
+[ext_resource type="Texture2D" uid="uid://spuowkn3telf" path="res://click2.png" id="6_6hkgn"]
+[ext_resource type="Texture2D" uid="uid://bibcm03diy3sh" path="res://click3.png" id="7_uop58"]
+[ext_resource type="Texture2D" uid="uid://cufxibuhpkuuk" path="res://blank.png" id="8_pl8re"]
+[ext_resource type="Script" path="res://click.gd" id="9_4fuev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j15eg"]
 size = Vector2(40, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ua5y0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m40y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6hkgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uop58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pl8re")
+}],
+"loop": true,
+"name": &"click",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,3 +52,11 @@ texture = ExtResource("2_ktvqq")
 [node name="cursor" type="Sprite2D" parent="."]
 texture = ExtResource("3_vtbc8")
 script = ExtResource("3_oboa7")
+
+[node name="click" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ua5y0")
+animation = &"click"
+frame = 3
+script = ExtResource("9_4fuev")
+
+[node name="clickIndicator" type="Sprite2D" parent="."]
