@@ -1,8 +1,8 @@
 extends AnimatedSprite2D
-@onready var _animated_sprite = $click
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	frame = 3
 	pass # Replace with function body.
 
 
@@ -13,7 +13,8 @@ func _process(delta):
 	
 func _input(event):
 	if event.is_action_pressed("Interaction"):
-		_animated_sprite.play("click")
+		stop()
+		play()
 		pass
 	pass
 	
