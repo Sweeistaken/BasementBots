@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3ceqe5xl4d25"]
 
-[ext_resource type="Texture2D" uid="uid://b7q3pff7sr4q6" path="res://cursor.png" id="1_fmc07"]
+[ext_resource type="Texture2D" uid="uid://buxkigfb6djhf" path="res://cursor-gui.png" id="1_e582q"]
 [ext_resource type="Script" path="res://cursor-gui.gd" id="2_1bm4q"]
 
 [node name="Control" type="Control"]
@@ -13,7 +13,7 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 64.0
-offset_bottom = 64.0
-texture = ExtResource("1_fmc07")
+offset_right = 25.0
+offset_bottom = 40.0
+texture = ExtResource("1_e582q")
 script = ExtResource("2_1bm4q")
